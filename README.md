@@ -8,7 +8,7 @@ LangChain과 MCP를 활용한 예제 프로젝트입니다.
 
 ```bash
 # Windows (PowerShell)
-iwr https://astral.sh/uv/install.ps1 -useb | iex
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
 
 # Linux/macOS
 curl -LsSf https://astral.sh/uv/install.sh | sh
