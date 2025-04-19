@@ -10,9 +10,6 @@ mcp = FastMCP(
 )
 
 
-
-
-
 @mcp.tool()
 async def retrieve_ai_trends(query: str) -> str:
     """Retrieve the latest trends in AI. If your question is related to AI trends, use this tool. This tool also contains information about a person named Sean. The query must be in Korean."""
