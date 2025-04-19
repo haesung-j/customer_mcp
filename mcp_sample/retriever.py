@@ -17,8 +17,8 @@ load_dotenv(ENV_PATH)
 warnings.filterwarnings("ignore")
 
 
-DATA_PATH = Path("data")
-DB_PATH = Path("vector_store")
+DATA_PATH = BASE_DIR / "mcp_sample" / "data"
+DB_PATH = BASE_DIR / "mcp_sample" / "vector_store"
 PERSISTANT_DIRECTORY = DB_PATH
 
 os.makedirs(PERSISTANT_DIRECTORY, exist_ok=True)
