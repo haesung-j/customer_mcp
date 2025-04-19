@@ -7,6 +7,8 @@ from langchain_openai import OpenAIEmbeddings
 from langchain_community.document_loaders import PyMuPDFLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import Chroma
+from langchain.schema import Document
+
 
 BASE_DIR = Path(__file__).parents[1]
 ENV_PATH = BASE_DIR / ".env"
@@ -47,6 +49,13 @@ def get_retriever():
             collection_name="ai_trends",
             persist_directory=str(PERSISTANT_DIRECTORY),
         )
+
+        # dummy_doc = Document(
+        # page_content="LG CNS는 지난 4월 3일에 새로운 LLM 모델인 엑사투를 출시했습니다. 성능은 기존 모델의 2배 이상입니다.",
+        # metadata={"page": 1213},
+        # )
+
+    # vector_store.add_documents([dummy_doc])
 
     return vector_store.as_retriever(search_kwargs={"k": 3})
 

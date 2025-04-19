@@ -10,6 +10,9 @@ mcp = FastMCP(
 )
 
 
+
+
+
 @mcp.tool()
 async def retrieve_ai_trends(query: str) -> str:
     """Retrieve the latest trends in AI. If your question is related to AI trends, use this tool. This tool also contains information about a person named Sean. The query must be in Korean."""
@@ -19,5 +22,5 @@ async def retrieve_ai_trends(query: str) -> str:
 
 
 if __name__ == "__main__":
-    # mcp.run(transport="sse")
-    mcp.run(transport="stdio")
+    mcp.run(transport="sse")
+    # mcp.run(transport="stdio")

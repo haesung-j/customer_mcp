@@ -23,12 +23,12 @@ cd customer-mcp
 
 # 가상환경 생성 및 의존성 설치
 uv venv
-uv pip install -r requirements.txt
+uv sync
 ```
 
 ### 3. 환경 변수 설정
 
-`.env` 파일을 생성하고 다음 환경 변수를 설정합니다:
+루트 디렉토리에 `.env` 파일을 생성하고 다음 환경 변수를 설정합니다:
 
 ```
 OPENAI_API_KEY=your_api_key_here
